@@ -15,12 +15,12 @@ export default class PokemonList extends Component {
     }
 
     getMorePokemon() {
-        // let url = "https://pokeapi.co/api/v2/pokemon?offset=" + this.state.offset + "&limit=" + this.state.loadNumber;
         fetch("https://pokeapi.co/api/v2/pokemon/?limit=25")
         .then(response => response.json())
         .then(data => {
           if (data) {
             this.setState({pokeInfo : data.results}, () => {
+            // eslint-disable-next-line
               this.state.pokeInfo.map(pokemon => {
                 fetch(pokemon.url)
                 .then(response => response.json())
@@ -31,12 +31,16 @@ export default class PokemonList extends Component {
                     this.setState({pokeDetails: temp})
                   }            
                 })
-                .catch(console.log)
+                .catch(error => {
+                    console.error('There has been a problem with your fetch operation:', error);
+                });
               })
             })        
           }
         })
-        .catch(console.log)
+        .catch(error => {
+            console.error('There has been a problem with your fetch operation:', error);
+        });
       }
     
       render() {
@@ -48,7 +52,7 @@ export default class PokemonList extends Component {
     
         return (
           <div className="container">
-            <div className="card">
+            <div className="columns is-mobile is-multiline is-centered">
               {pokemonList}
             </div>
           </div>
