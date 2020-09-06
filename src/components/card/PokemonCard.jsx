@@ -1,15 +1,16 @@
 import React from 'react'
-import CardContent from './CardContent'
-import CardTitle from './CardTitle'
+import './Card.css'
+import CardFooter from './CardFooter'
+import CardHeader from './CardHeader'
 import CardImage from './CardImage'
 
 export default function PokemonCard({pokemon}) {
     return (
-        <div className="column is-one-quarter is-narrow">
+        <div className="column is-narrow">
             <div className="card">                
-                <CardTitle pokemon={pokemon} />                 
+                <CardHeader pokemon={pokemon} />                 
                 <CardImage pokemon={pokemon} />         
-                <CardContent pokemon={pokemon} />
+                <CardFooter pokemon={pokemon} />
             </div>
         </div>
     )
