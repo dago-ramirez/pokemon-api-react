@@ -1,0 +1,26 @@
+Planificación proyecto pokemon-api-react:
+
+1. Inicialización y planificación del proyecto:
+	- Creación del proyecto en VSCode con react.
+	- Creación del repositorio en GitHub.
+	- Creación del proyecto en GitHub projects.
+	
+2. Deseño Inicial:
+	- Diseño de prototipo con herramienta de diseño.
+	- Planificación del la estructura del proyecto.
+
+3. Inicio del proyecto:
+	* Primera etapa:
+		- Instalación de bibliotecas necesarias.
+		- Renderizar los 25 primeros pokemones con imagen y nombre.
+		- Agregar componente de filtrado de pokemones por nombre.
+		
+	* Segunda etapa:
+		- Actualización del listado principal con el número, tipo y evolución.
+		- Renderización de información detallada del pokemon.
+		- Implementar react router para la transición de la información detallada.
+		
+4. Desplegal el proyecto en vercel.
+	- Instalar las bibliotecas requeridas para el despliegue del proyecto en vercel.
+	- Desplegar el proyecto.
+		
