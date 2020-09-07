@@ -47,13 +47,18 @@ export default class PokemonList extends Component {
         const {pokeDetails} = this.state;
     
         const pokemonList = pokeDetails.map((pokemon, index) => {
-          return (<PokemonCard pokemon={pokemon} key={index}/>);
+          return (
+          <PokemonCard pokemon={pokemon} key={index}/>
+          
+          );
         });
     
         return (
           <div className="container">
             <div className="columns is-mobile is-multiline is-centered">
+              {/* <Link to={`/card/${index}`}> */}
               {pokemonList}
+              {/* </Link> */}
             </div>
           </div>
         );

@@ -2,3 +2,8 @@
     background-color: aquamarine;
     min-width: 250px;
 }
+
+.card-image{
+    width: 200px;
+    height: 200px;
+}
