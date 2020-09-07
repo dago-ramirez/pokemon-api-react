@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+// import PokemonCard from '../card/PokemonCard';
 
-export default class HeaderSearch extends Component {
-    constructor(pokemon) {
-        super(pokemon);
-        this.state = {pokemon}
-    }    
+export default class Search extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {props}
+    }
 
     toggleModalActive() {      
         document.querySelector('.modal').classList.add('is-active');
@@ -13,9 +14,9 @@ export default class HeaderSearch extends Component {
     toggleModalDeactive() {       
         document.querySelector('.modal').classList.remove('is-active');
     }
-
+ 
     render() {
-        console.log(this.state);
+
         return (
             <div className="columns is-mobile is-centered">
                 <div className="column is-3 level">
@@ -34,11 +35,12 @@ export default class HeaderSearch extends Component {
                 <div className="modal">
                     <div className="modal-background"></div>
                     <div className="modal-card">
-                        <header className="modal-card-head">
+                        <header className="modal-card-head">                            
                             <p className="modal-card-title">Modal title</p>
                             <button className="delete" aria-label="close" onClick={this.toggleModalDeactive}></button>
                         </header>
                         <section className="modal-card-body">
+                            {/* <PokemonCard pokemon={this.props.pokemon.pokemon[0]}/> */}
                             <p>Content ...</p>
                         </section>
                         <footer className="modal-card-foot">
